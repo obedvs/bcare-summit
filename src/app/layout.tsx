@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Work_Sans } from "next/font/google"
+import { Poppins } from "next/font/google"
 import "./globals.css";
 
-const work = Work_Sans({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
   title: "B-Care",
-  description: "B-Care es un proyecto",
+  description: "B-Care es un proyecto creado en el hackathon Summit 2024",
+  icons: {
+    icon: "/b-care.svg",
+  }
 };
 
 export default function RootLayout({
@@ -17,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${work.className} antialiased`}
+        className={`${poppins.className} antialiased`}
       >
         {children}
       </body>
