@@ -31,6 +31,7 @@ const Testimonial = () => {
 
   // Estado para manejar el índice actual del Swiper
   const [activeIndex, setActiveIndex] = useState(0);
+  console.log(activeIndex);
   return (
     <section className="relative container mx-auto px-2 py-8 grid place-items-center">
       <h2 className="text-2xl font-bold tracking-tight sm:text-4xl text-center mb-4">
