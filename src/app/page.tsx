@@ -1,3 +1,4 @@
+import Chatbot from "@/components/chatbot";
 import Hero from "@/components/hero";
 import Reasons from "@/components/reasons";
 import Services from "@/components/services";
@@ -8,6 +9,7 @@ const LandingPage = () => {
       <Hero />
       <Services />
       <Reasons />
+      <Chatbot  />
     </main>
   );
 };
