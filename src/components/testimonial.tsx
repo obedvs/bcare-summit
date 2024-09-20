@@ -1,9 +1,9 @@
 "use client";
 
-// @ts-ignore
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,12 +26,21 @@ const cards = [
 ];
 
 const Testimonial = () => {
+  // Ref para controlar el Swiper
+  const swiperRef = useRef<SwiperCore | null>(null);
+
+  // Estado para manejar el índice actual del Swiper
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className="relative container mx-auto px-2 py-8 grid place-items-center">
       <h2 className="text-2xl font-bold tracking-tight sm:text-4xl text-center mb-4">
         Testimonios
       </h2>
-      <Swiper className="mySwiper">
+      <Swiper
+        className="mySwiper"
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+      >
         {cards.map((card, index) => (
           <SwiperSlide key={index}>
             <div className="bg-gradient-to-tr from-[#6DFFD6] to-[#34A5AB] rounded-3xl p-1 h-3/4">
