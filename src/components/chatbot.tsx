@@ -23,6 +23,7 @@ const Chatbot = () => {
         }
       } catch (error) {
         setRes("Intenta de nuevo");
+        console.log(error)
       }
     });
   };
