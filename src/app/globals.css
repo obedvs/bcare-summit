@@ -1,3 +1,119 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper {
+  min-width: 340px;
+  max-width: 780px;
+  width: 100%;
+  height: 280px;
+}
+
+/* .swiper {
+  width: 100%;
+  height: 100%;
+} */
+
+.swiper-slide {
+  position: relative !important;
+  cursor: grab;
+  font-size: 18px;
+  background: #fff;
+  padding: 0 2px !important;
+
+  /* Center slide text vertically */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: end !important;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+  } */
+
+.timeline-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 225px; /* Adjust the width as needed */
+}
+
+.timeline-icon {
+  position: relative;
+  width: 100px; /* Adjust the size of the rotated square */
+  height: 100px; /* Adjust the size of the rotated square */
+  transform: rotate(45deg); /* Rotate the square by 45 degrees */
+  border-radius: 10%;
+  background-color: #eaeaea; /* Set the background color of the square */
+  overflow: hidden; /* Hide the overflow to create the 3D effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-icon .svg-q0 {
+  filter: drop-shadow(0px 10px 5px rgba(109, 2555, 214, 0.4));
+}
+.timeline-icon .svg-q1 {
+  filter: drop-shadow(0px 10px 5px rgba(35, 146, 245, 0.4));
+}
+.timeline-icon .svg-q2 {
+  filter: drop-shadow(0px 10px 5px rgba(85, 44, 179, 0.4));
+}
+.timeline-icon .svg-q3 {
+  filter: drop-shadow(0px 10px 5px rgba(52, 165, 171, 0.4));
+}
+.timeline-icon .svg-q4 {
+  filter: drop-shadow(0px 10px 5px rgba(52, 165, 171, 0.4));
+}
+
+.border-q0 {
+  border-bottom: 5px solid #6dffd6;
+  border-right: 5px solid #6dffd6;
+  box-shadow: 10px 10px 10px rgba(109, 2555, 214, 0.7); /* Customize the shadow */
+}
+.border-q1 {
+  border-bottom: 5px solid #2392f5;
+  border-right: 5px solid #2392f5;
+  box-shadow: 10px 10px 10px rgba(35, 146, 245, 0.7); /* Customize the shadow */
+}
+.border-q2 {
+  border-bottom: 5px solid #552cb3;
+  border-right: 5px solid #552cb3;
+  box-shadow: 10px 10px 10px rgba(85, 44, 179, 0.7); /* Customize the shadow */
+}
+.border-q3 {
+  border-bottom: 5px solid #34a5ab;
+  border-right: 5px solid #34a5ab;
+  box-shadow: 10px 10px 10px rgba(52, 165, 171, 0.7); /* Customize the shadow */
+}
+.border-q4 {
+  border-bottom: 5px solid #90EDFF;
+  border-right: 5px solid #90EDFF;
+  box-shadow: 10px 10px 10px rgba(144, 237, 255, 0.702); /* Customize the shadow */
+}
+
+.timeline-info {
+  margin-top: 10px; /* Adjust the spacing between the icon and info */
+  text-align: start;
+}
+
+.timeline-info h4 {
+  margin-bottom: 5px;
+}
+
+.timeline-info .line {
+  width: 105px; /* Set the width of the horizontal line to fill the container */
+  height: 2px; /* Set the height of the horizontal line */
+  margin-bottom: 5px; /* Add spacing below the horizontal line */
+}
