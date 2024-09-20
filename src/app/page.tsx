@@ -1,4 +1,6 @@
+import Chatbot from "@/components/chatbot";
 import Hero from "@/components/hero";
+import Reasons from "@/components/reasons";
 import Pricing from "@/components/pricing";
 import Roadmap from "@/components/roadmap";
 import Services from "@/components/services";
@@ -9,6 +11,8 @@ const LandingPage = () => {
     <main className="w-full grid">
       <Hero />
       <Services />
+      <Reasons />
+      <Chatbot  />
       <Testimonial />
       <Pricing />
       <Roadmap />
