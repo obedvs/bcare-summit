@@ -11,10 +11,10 @@ const LandingPage = () => {
     <main className="w-full grid">
       <Hero />
       <Services />
-      <Reasons />
-      <Chatbot  />
       <Testimonial />
       <Pricing />
+      <Reasons />
+      <Chatbot  />
       <Roadmap />
     </main>
   );

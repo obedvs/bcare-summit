@@ -7,12 +7,6 @@ import { VscRobot } from "react-icons/vsc";
 export default function Roadmap() {
   return (
     <section id="roadmap" className="relative">
-      {/* Section background (needs .relative class on parent and next sibling elements) */}
-      <div
-        className="absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-100 pointer-events-none"
-      ></div>
-      <div className="absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2"></div>
-
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 flex justify-around">
         <div className="py-6 md:py-10 flex flex-col justify-around">
           {/* Section header */}

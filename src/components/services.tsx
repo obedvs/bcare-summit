@@ -1,6 +1,7 @@
 // components/Services.tsx
 "use client"; // Si estás usando la nueva App Router de Next.js
 
+import Image from 'next/image';
 import { useState } from 'react';
 
 // Definimos la interfaz para los tipos de información
@@ -43,52 +44,54 @@ const Services = () => {
 
   return (
     <section className="pt-12">
-      <h1 className="text-6xl font-semibold tracking-tight sm:text-5xl text-center">
+      <h2 className="text-2xl font-bold tracking-tight sm:text-4xl text-center">
         Nuestros Servicios
-      </h1>
-      <div className="relative flex items-center gap-24 w-[75%] mx-auto py-10">
-        <article className="relative w-full md:w-[45%]">
-          <div className="w-64 h-64 absolute bottom-0 left-1/2 transform -translate-x-1/2"></div>
-          <div className="relative z-10 flex justify-center">
-            <img
+      </h2>
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 container mx-auto py-10 px-2">
+        <article className="relative w-full flex flex-col md:block items-center gap-4">
+          {/* <div className="w-64 h-64 absolute bottom-0 left-1/2 transform -translate-x-1/2"></div> */}
+          <div className="z-10 md:flex justify-center hidden">
+            <Image
               src="/services.png"
               alt="Doctors"
-              className="h-[35rem] object-contain"
+              className="h-[28rem] object-contain max-w-[320px]"
+              width={500}
+              height={500}
             />
           </div>
 
           {/* Botón Laboratorios */}
           <button
             onClick={() => handleChangeInfo("laboratorios")}
-            className="z-50 text-lg absolute top-96 left-32 bg-white text-black font-semibold rounded-full py-2 pl-2 pr-6 space-x-2 flex items-center shadow-lg transform -translate-x-1/2"
+            className="min-w-[187.67px] z-50 text-lg md:absolute top-44 left-32 bg-white text-black font-semibold rounded-full py-2 px-2 gap-x-2 flex items-center justify-center shadow-lg md:-translate-x-1/2"
           >
-            <img src="/pacient.png" className="w-12" alt="Laboratorios" />
+            <Image src="/pacient.png" className="w-12" alt="Laboratorios" width={52} height={52} />
             <span>Laboratorios</span>
           </button>
 
           {/* Botón Clínicas */}
           <button
             onClick={() => handleChangeInfo("clinicas")}
-            className="z-50 text-lg absolute top-60 right-[-3rem] bg-white text-black font-semibold rounded-full py-2 pl-2 pr-6 space-x-2 flex items-center shadow-lg transform -translate-x-1/2"
+            className="min-w-[187.67px] z-50 text-lg md:absolute top-24 right-0 bg-white text-black font-semibold rounded-full py-2 px-2 gap-x-2 flex items-center justify-start shadow-lg md:-translate-x-1/2"
           >
-            <img src="/pacient.png" className="w-12" alt="Clínicas" />
+            <Image src="/pacient.png" className="w-12" alt="Clínicas" width={52} height={52} />
             <span>Clínicas</span>
           </button>
 
           {/* Botón Pacientes */}
           <button
             onClick={() => handleChangeInfo("pacientes")}
-            className="z-50 text-lg absolute bottom-6 right-[-1rem] bg-white text-black font-semibold rounded-full py-2 pl-2 pr-6 space-x-2 flex items-center shadow-lg transform -translate-x-1/2"
+            className="min-w-[187.67px] z-50 text-lg md:absolute bottom-24 right-4 bg-white text-black font-semibold rounded-full py-2 px-2 gap-x-2 flex items-center justify-start shadow-lg md:-translate-x-1/2"
           >
-            <img src="/pacient.png" className="w-12" alt="Pacientes" />
+            <Image src="/pacient.png" className="w-12" alt="Pacientes" width={52} height={52} />
             <span>Pacientes</span>
           </button>
         </article>
 
         {/* Contenido dinámico a la derecha */}
-        <article className="space-y-8 w-[40%] mt-24">
+        <article className="space-y-8 w-full">
           <h2 className="text-2xl tracking-tight sm:text-4xl">{info.title}</h2>
-          <p className="text-xs font-light leading-7">{info.description}</p>
+          <p className="text-lg font-light leading-7">{info.description}</p>
           <button className="bg-[#562CB4] py-2 px-6 rounded-3xl font-medium text-white">
             Conoce más
           </button>
