@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "B-Care",
   description: "B-Care es un proyecto creado en el hackathon Summit 2024",
   icons: {
-    icon: "/b-care.svg",
+    icon: "/bcare.svg",
   }
 };
 

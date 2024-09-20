@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -17,9 +18,9 @@ const Hero = () => {
                 B-Care es un proyecto creado en el hackathon Summit 2024
               </p>
             </div>
-            <button className="bg-[#34A5AB] py-2 px-4 rounded-3xl font-medium text-white text-xl">
+            <Link href="/#services" className="bg-[#34A5AB] py-2 px-4 rounded-3xl font-medium text-white text-xl">
               Conoce más
-            </button>
+            </Link>
           </div>
         </div>
       </div>

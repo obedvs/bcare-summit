@@ -10,7 +10,7 @@ const planes = [
       {
         id: 1,
         title: "Plan Gratuito",
-        price: "0",
+        price: "$0",
         description: [
           "Administración de datos personales.",
           "Historial de citas y tratamientos.",
@@ -32,7 +32,7 @@ const planes = [
       {
         id: 1,
         title: "Plan Estándar",
-        price: "$100,000/año",
+        price: "Contactar",
         description: [
           "Acceso a IA",
           "Número limitado de pacientes.",
@@ -57,8 +57,8 @@ const planes = [
     plans: [
       {
         id: 1,
-        title: "Plan Estándar",
-        price: "0",
+        title: "Plan Gratuito",
+        price: "$0",
         description: [
           "Oportunidad de provar la plataforma.",
           "Numero limitado de pacientes.",
@@ -140,7 +140,7 @@ const Pricing = () => {
               )
             )}
           </ul>
-          <button className="py-2 px-4 bg-white border border-[#562CB4] text-[#562CB4] rounded-3xl self-center mt-12">
+          <button className="py-2 px-4 bg-white border border-[#562CB4] text-[#562CB4] rounded-3xl self-center mt-auto">
             Obtener Plan
           </button>
         </article>
